@@ -1,0 +1,161 @@
+.p5Canvas{
+    margin:100px ;
+}
+
+
+/* ================================lamp */
+.lamp{
+    position: relative;
+    top: 200px;
+    left: 320px;
+
+    width: 100px;
+    height: 100px;
+    z-index: -0;
+}
+/* lamp_shade плафон */
+.lamp_shade{
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: green;
+    border-bottom: 3px solid #1c4122f8;
+
+    border-radius: 70% 70% 0 0;
+    transform: rotate(45deg) ;
+    z-index: 3;
+
+    position: absolute;
+    top: -2;
+    left: 2;
+
+}
+.lamp_shade::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 19px;
+    height: 10px;
+    top: -8px;
+    left: 10px;
+    /* background-color: green; */
+    background-color: #2c6436f8;
+    border-radius: 70% 70% 0 0;
+
+
+}
+/* лампочка */
+.round{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    /* background-color:#7777772c ; */
+
+    border-radius: 50%;
+
+}
+/* проволока накаливания  */
+.inside_lamp::before, .inside_lamp::after{
+    content: "";
+
+    position: absolute;
+
+    background-color: #00000077;
+    border-radius: 8px;
+    height: 0.5px;
+
+
+}
+.inside_lamp::before{
+    transform:  rotate(-45deg) ;
+    top: 48%;
+    left: 33%;
+    width: 12px;
+    
+}
+.inside_lamp::after{
+    transform:  rotate(45deg) ;
+    top: 62%;
+
+    width: 5px;
+    left: 33%;
+}
+.dark{
+    box-shadow: -9px 8px 22px rgb(235, 213, 15);
+}
+
+/* конструкция основы */
+.foundation > span, .foundation > span::after{
+    display: block;
+    position: absolute;
+}
+.foundation_up{
+    top: 25px;left: 30px;
+    transform:  rotate(37deg);
+
+}
+.foundation_up, .foundation_up::after{
+
+    width: 65px;
+    height: 1px;
+    background-color: green;
+
+
+}
+.foundation_up::after{
+    content: "";
+    
+    transform:  rotate(0deg);
+    top: 3px;
+    left: 0px;
+
+}
+/* ------------- */
+.foundation_down{
+    top: 75px;
+    left: 43px;
+    transform:  rotate(115deg);
+}
+.foundation_down  {
+    width: 65px;
+    height: 1px;
+    background-color: green;
+}
+.foundation_down::after{
+    content: "";
+    width: 65px;
+    height: 1px;
+    background-color: green;
+    transform:  rotate(0deg);
+    top: 3px;
+    left: 0px;
+}
+/* ------------- */
+.foundation_foot{
+    display: block;
+    width: 40px;
+    height: 10px;
+    background-color: green;
+
+    border-radius: 20% 20% 0 0;
+    transform: rotate(0deg) ;
+    z-index: 3;
+
+    position: absolute;
+    top: 100px;
+    left: 30px;
+
+    border-bottom: 3px solid #1c4122f8;
+
+}
+/* крепление ног */
+.foundation_knie{
+    width: 10px;
+    height: 10px;
+    background-color: #2c6436f8;
+    border: 1px solid #1c4122f8;
+z-index: 3;
+    top: 40px;
+    left: 80px;
+    border-radius: 50%;
+}
